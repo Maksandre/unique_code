@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@unique-nft/accounts": "^0.3.6",
     "@unique-nft/sdk": "^0.6.2"
   }
 }
