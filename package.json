@@ -1,5 +1,22 @@
 {
+  "scripts": {
+    "codestyle": "prettier . --write",
+    "lint": "eslint . --fix"
+  },
   "dependencies": {
-    "@unique-nft/sdk": "^0.6.2"
+    "@types/adm-zip": "^0.5.5",
+    "@types/node": "^20.11.17",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@unique-nft/accounts": "^0.3.6",
+    "@unique-nft/schemas": "0.1.5",
+    "@unique-nft/sdk": "^0.6.2",
+    "adm-zip": "^0.5.10",
+    "dotenv": "^16.4.2",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   }
 }
