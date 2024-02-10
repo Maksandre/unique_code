@@ -1,6 +1,6 @@
 import { KeyringAccount } from "@unique-nft/accounts/keyring";
 import Sdk, { Options } from "@unique-nft/sdk";
-import { config } from "./0-config";
+import { config } from "./00-config";
 
 export const createSdk = (signer: KeyringAccount): Sdk => {
   const options: Options = {

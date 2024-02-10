@@ -1,6 +1,6 @@
 import { KeyringOptions } from "@polkadot/keyring/types";
 import { KeyringAccount, KeyringProvider } from "@unique-nft/accounts/keyring";
-import { config } from "./0-config";
+import { config } from "./00-config";
 
 export const getSigner = async (): Promise<KeyringAccount> => {
   const options: KeyringOptions = {
