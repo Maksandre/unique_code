@@ -1,8 +1,9 @@
-import { uploadImages } from "./03-upload-images";
 import { createCollection } from "./100-collection";
+import { createNfts } from "./101-nfts";
 
 const main = async () => {
-  await createCollection();
+  const collectionId = await createCollection();
+  await createNfts(collectionId);
 };
 
 // Run program
