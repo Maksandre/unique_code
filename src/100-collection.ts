@@ -8,7 +8,7 @@ export const createCollection = async () => {
   const sdk = getSdk(signer);
 
   const ipfsUrl = await uploadImages("./images");
-  const { block, error } = await sdk.collection.create({
+  const { block, parsed, error } = await sdk.collection.create({
     name: "Square hole",
     description: "Square heads",
     tokenPrefix: "SQR",
@@ -23,5 +23,10 @@ export const createCollection = async () => {
 
   if (error) throw Error("Error creating collection");
 
-  console.log("Created at block:", block);
+  if (!parsed?.collectionId) throw Error("Cannot extract collection id");
+
+  console.log("Created at block:", block.hash);
+  console.log("Collection Id:", parsed?.collectionId);
+
+  return parsed.collectionId;  
 };

@@ -1,5 +1,6 @@
 import {
   AttributeSchemaDto,
+  CreateTokenPayload,
   UniqueCollectionSchemaToCreateDto,
 } from "@unique-nft/sdk";
 
@@ -86,7 +87,7 @@ export const attributesSchema: Record<string, AttributeSchemaDto> = {
     name: { _: "Favorite quote" },
     type: "string",
   },
-};
+} as const;
 
 export const getUniqueV1Schema = (
   args: GetSchemaArgs,
@@ -106,6 +107,30 @@ export const getUniqueV1Schema = (
 
   return schema;
 };
+
+export const tokensPayload: CreateTokenPayload[] = [
+  {
+    data: {
+      image: { urlInfix: "sh1" },
+      attributes: {
+        0: "0",
+        1: "1",
+        2: "12",
+        3: ["0", "4"],
+        4: "2019-02-12T15:45:00",
+        5: "rgba(255, 0, 0, 0.5)",
+        6: "yourstube.com",
+        7: "58.9",
+        8: "false",
+        9: "42",
+        10: "00:30:00",
+        11: "1644681033",
+        12: "The way to get started is to quit talking and begin doing",
+      },
+    },
+  },
+];
+
 
 type GetSchemaArgs = {
   ipfsUrl: string;
