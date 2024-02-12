@@ -9,10 +9,16 @@ export const createCollection = async () => {
 
   const ipfsUrl = await uploadImages("./images");
   const { block, error } = await sdk.collection.create({
-    name: "New",
-    description: "New collection",
-    tokenPrefix: "NEW",
+    name: "Square hole",
+    description: "Square heads",
+    tokenPrefix: "SQR",
     schema: getUniqueV1Schema({ ipfsUrl }),
+    metaUpdatePermission: "ItemOwner",
+    permissions: {
+      access: "Normal",
+      mintMode: true,
+      nesting: { collectionAdmin: true, tokenOwner: true },
+    },
   });
 
   if (error) throw Error("Error creating collection");
