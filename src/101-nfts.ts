@@ -6,12 +6,12 @@ export const createNfts = async (collectionId: number) => {
   const signer = await getSigner();
   const sdk = getSdk(signer);
 
-  const { block, error } = await sdk.token.createMultiple({
+  const { block, error } = await sdk.token.createMultiple.submitWaitResult({
     collectionId,
     tokens: tokensPayload,
   });
 
   if (error) throw Error("Error creating tokens");
 
-  console.log("Created at block:", block);
+  console.log("Created at block:", block.hash);
 };
