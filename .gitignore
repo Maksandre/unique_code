@@ -5,3 +5,8 @@ DS_Store
 yarn-error.log
 package-lock.json
 *.zip
+
+# Baedeker
+.baedeker/baedeker
+.baedeker/vendor
+.baedeker/.bdk-env
