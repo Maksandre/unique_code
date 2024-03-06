@@ -9,7 +9,7 @@ export const createCollection = async () => {
 
   const ipfsUrl = await uploadImages("./images");
   const { block, parsed, error } = await sdk.collection.create({
-    name: "Square hole",
+    name: "Square",
     description: "Square heads",
     tokenPrefix: "SQR",
     schema: getUniqueV1Schema({ ipfsUrl }),

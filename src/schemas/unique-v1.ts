@@ -1,15 +1,22 @@
 import {
+  AttributeSchema,
+  AttributeType,
+  UniqueCollectionSchemaToCreate,
+} from "@unique-nft/schemas";
+import {
   AttributeSchemaDto,
   CreateTokenPayload,
   UniqueCollectionSchemaToCreateDto,
 } from "@unique-nft/sdk";
 
-export const attributesSchema: Record<string, AttributeSchemaDto> = {
+export const attributesSchema: Record<string, AttributeSchema> = {
   "0": {
     name: {
       _: "Gender",
+      ru: "Гендер",
+      it: "Genere",
     },
-    type: "string",
+    type: AttributeType.string,
     enumValues: { 0: { _: "Male" }, 1: { _: "Female" } },
     optional: false,
   },
@@ -17,20 +24,20 @@ export const attributesSchema: Record<string, AttributeSchemaDto> = {
     name: {
       _: "Skin",
     },
-    type: "string",
+    type: AttributeType.string,
     enumValues: { 0: { _: "Green" }, 1: { _: "Blue" } },
   },
   "2": {
     name: {
       _: "Power",
     },
-    type: "number",
+    type: AttributeType.number,
   },
   "3": {
     name: {
       _: "Traits",
     },
-    type: "string",
+    type: AttributeType.string,
     isArray: true,
     enumValues: {
       0: { _: "Black hair" },
@@ -46,63 +53,82 @@ export const attributesSchema: Record<string, AttributeSchemaDto> = {
     name: {
       _: "Date of birth",
     },
-    type: "isoDate",
+    type: AttributeType.isoDate,
   },
   "5": {
     name: {
       _: "Color",
     },
-    type: "colorRgba",
+    type: AttributeType.colorRgba,
     optional: true,
   },
   "6": {
     name: {
       _: "Website",
     },
-    type: "url",
+    type: AttributeType.url,
   },
   "7": {
     name: {
       _: "Weight",
     },
-    type: "float",
+    type: AttributeType.float,
   },
   "8": {
     name: { _: "Vegan" },
-    type: "boolean",
+    type: AttributeType.boolean,
   },
   "9": {
     name: { _: "Lucky number" },
-    type: "integer",
+    type: AttributeType.integer,
   },
   "10": {
     name: { _: "Wake up" },
-    type: "time",
+    type: AttributeType.time,
   },
   "11": {
     name: { _: "Minted at" },
-    type: "timestamp",
+    type: AttributeType.timestamp,
   },
   "12": {
     name: { _: "Favorite quote" },
-    type: "string",
+    type: AttributeType.string,
   },
 } as const;
 
 export const getUniqueV1Schema = (
   args: GetSchemaArgs,
-): UniqueCollectionSchemaToCreateDto => {
-  const schema: UniqueCollectionSchemaToCreateDto = {
+): UniqueCollectionSchemaToCreate => {
+  const schema: UniqueCollectionSchemaToCreate = {
     schemaName: "unique",
     schemaVersion: "1.0.0",
     coverPicture: {
       urlInfix: args.coverName ?? "cover",
     },
     image: {
-      urlTemplate: `${args.ipfsUrl}/{infix}.${args.ext ?? "png"}`,
+      urlTemplate: `${args.ipfsUrl}/{infix}`,
     },
     attributesSchemaVersion: "1.0.0",
     attributesSchema,
+    audio: {
+      format: "mp3",
+      urlTemplate: "https://soundcloud.com/bernardo",
+    },
+    file: {
+      urlTemplate: `${args.ipfsUrl}/cover.png`,
+    },
+    coverPicturePreview: {
+      urlInfix: "cover.png",
+    },
+    royalties: [
+      {
+        address: "",
+        decimals: 12,
+        royaltyType: "DEFAULT",
+        value: 12n,
+        version: 1,
+      },
+    ],
   };
 
   return schema;
@@ -111,7 +137,7 @@ export const getUniqueV1Schema = (
 export const tokensPayload: CreateTokenPayload[] = [
   {
     data: {
-      image: { urlInfix: "sh1" },
+      image: { urlInfix: "sh1.png" },
       encodedAttributes: {
         0: 0,
         1: 1,
@@ -131,9 +157,7 @@ export const tokensPayload: CreateTokenPayload[] = [
   },
 ];
 
-
 type GetSchemaArgs = {
   ipfsUrl: string;
   coverName?: string;
-  ext?: string;
 };
