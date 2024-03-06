@@ -2,14 +2,10 @@ import {
   AttributeSchema,
   AttributeType,
   UniqueCollectionSchemaToCreate,
-} from "@unique-nft/schemas";
-import {
-  AttributeSchemaDto,
-  CreateTokenPayload,
-  UniqueCollectionSchemaToCreateDto,
-} from "@unique-nft/sdk";
+} from "schema1";
+import { CreateTokenPayload } from "@unique-nft/sdk";
 
-export const attributesSchema: Record<string, AttributeSchema> = {
+export const attributesSchemaU1: Record<string, AttributeSchema> = {
   "0": {
     name: {
       _: "Gender",
@@ -109,7 +105,7 @@ export const getUniqueV1Schema = (
       urlTemplate: `${args.ipfsUrl}/{infix}`,
     },
     attributesSchemaVersion: "1.0.0",
-    attributesSchema,
+    attributesSchema: attributesSchemaU1,
     audio: {
       format: "mp3",
       urlTemplate: "https://soundcloud.com/bernardo",
@@ -134,10 +130,10 @@ export const getUniqueV1Schema = (
   return schema;
 };
 
-export const tokensPayload: CreateTokenPayload[] = [
+export const tokensPayloadU1: CreateTokenPayload[] = [
   {
     data: {
-      image: { urlInfix: "sh1.png" },
+      image: { urlInfix: "sh1" },
       encodedAttributes: {
         0: 0,
         1: 1,

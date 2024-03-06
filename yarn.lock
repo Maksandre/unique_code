@@ -1066,19 +1066,19 @@
     ethers "^5.7.1"
     reflect-metadata "^0.1.13"
 
-"@unique-nft/schemas@0.1.5":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@unique-nft/schemas/-/schemas-0.1.5.tgz#fe0e0ec67aecfbedba0672a279e34b37d9788187"
-  integrity sha512-4oRpZmf2IkFXnEAtRtXZa4oEZC2uhUjg99MAmMco1IlSsu3UdukG6pHQn5UJSJausYMV61xp6HKxxpzVxYTuPg==
+"@unique-nft/schemas@2.1.4", "schema2@npm:@unique-nft/schemas@2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@unique-nft/schemas/-/schemas-2.1.4.tgz#016dc8e357f75e4989b039079c03b99456409635"
+  integrity sha512-Aa9pqKGdwa185KRcOZKnssht/nycTAyLP/TntnQx7g+ib9gXxJLBAAjWaLs/uPPTr2GeBLIR+VyablA/ksJE6A==
   dependencies:
-    "@unique-nft/utils" "^0.3.13"
-    protobufjs "^7.1.1"
-    zod "^3.21.4"
+    "@unique-nft/utils" "^0.3.17"
+    protobufjs "^7.2.6"
+    zod "^3.22.4"
 
-"@unique-nft/sdk@^0.6.2":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@unique-nft/sdk/-/sdk-0.6.2.tgz#f66c07b2544ec7580d7ed29c3bf87a1b271d42cc"
-  integrity sha512-QlfoYmkPHuXSjPvmXuSi3sCl0Vmqe+MpcCaLfRo2Ndvtdr393MsML7m7JZhPBmWAdZbeSuWDJv16pyCXnlNgIg==
+"@unique-nft/sdk@0.7.1":
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/@unique-nft/sdk/-/sdk-0.7.1.tgz#30d8bcddf34140a5816bf62cad18ee9b18dedda1"
+  integrity sha512-QgJMiQVvUeiwxg9+ta4lPlinM5vabXX+I5o3ftp+V15pTeWhDtPrmq+NCOYKI56x4R8iMbg5fzMoO2H6hMxfwg==
   dependencies:
     "@unique-nft/sr25519" "^0.0.1"
     "@unique-nft/utils" "^0.3.12"
@@ -1095,6 +1095,14 @@
     "@noble/hashes" "^1.2.0"
     base-x "^4.0.0"
 
+"@unique-nft/sr25519@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@unique-nft/sr25519/-/sr25519-0.0.2.tgz#c0c1b918c950cb3c0c04dfa7ab7cca8ccf62dd3a"
+  integrity sha512-41DJwU8aX56MAlNgmhAOYaE3ie+7HoETsVhqv5d3Pk7dpr1Aezmzihl5fqfLDgx0XeD8Q1QHY9pYAmsNmgQd2A==
+  dependencies:
+    "@noble/hashes" "^1.3.3"
+    base-x "^4.0.0"
+
 "@unique-nft/utils@0.3.11":
   version "0.3.11"
   resolved "https://registry.yarnpkg.com/@unique-nft/utils/-/utils-0.3.11.tgz#920f64497393853a44e5329e2664e88a54702564"
@@ -1104,12 +1112,22 @@
     base-x "^4.0.0"
     utf-helpers "^0.0.3"
 
-"@unique-nft/utils@^0.3.12", "@unique-nft/utils@^0.3.13":
+"@unique-nft/utils@^0.3.12":
   version "0.3.14"
   resolved "https://registry.yarnpkg.com/@unique-nft/utils/-/utils-0.3.14.tgz#f39757761e2b230bf00896c94e47638f7cc78a50"
   integrity sha512-GJWPaSCM5ZvKJOiLY53LlngBZGAzySk4mSkcWoCUftqgNaeCekOadCDBiy2jmRhIEKpxE6wDRW/gT+2S8JtjvA==
   dependencies:
     "@noble/hashes" "^1.1.2"
+    base-x "^4.0.0"
+    utf-helpers "^0.0.3"
+
+"@unique-nft/utils@^0.3.13", "@unique-nft/utils@^0.3.17":
+  version "0.3.17"
+  resolved "https://registry.yarnpkg.com/@unique-nft/utils/-/utils-0.3.17.tgz#ef6b483fd24770a85632423ef21dfeb8acbe5b79"
+  integrity sha512-rKldHiI+qaTtYbwHc2mopHxM3O5YyyagpPTcqaZ7/TB7B0OIFUpylV6nfWzACn15mmf0kz0MwtUU4FrpsHofNA==
+  dependencies:
+    "@noble/hashes" "^1.3.3"
+    "@unique-nft/sr25519" "^0.0.2"
     base-x "^4.0.0"
     utf-helpers "^0.0.3"
 
@@ -1997,7 +2015,7 @@ propagate@^2.0.0:
   resolved "https://registry.yarnpkg.com/propagate/-/propagate-2.0.1.tgz#40cdedab18085c792334e64f0ac17256d38f9a45"
   integrity sha512-vGrhOavPSTz4QVNuBNdcNXePNdNMaO1xj9yBeH1ScQPjk/rhg9sSlCXPhMkFuaNNW/syTvYqsnbIJxMBfRbbag==
 
-protobufjs@^7.1.1:
+protobufjs@^7.1.1, protobufjs@^7.2.6:
   version "7.2.6"
   resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-7.2.6.tgz#4a0ccd79eb292717aacf07530a07e0ed20278215"
   integrity sha512-dgJaEDDL6x8ASUZ1YqWciTRrdOuYNzoOf27oHNfdyvKqHr5i0FV7FSLU+aIeFjyFgVxrpTOtQUi0BLLBymZaBw==
@@ -2060,6 +2078,15 @@ rxjs@^7.8.1:
   integrity sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==
   dependencies:
     tslib "^2.1.0"
+
+"schema1@npm:@unique-nft/schemas@0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@unique-nft/schemas/-/schemas-0.1.5.tgz#fe0e0ec67aecfbedba0672a279e34b37d9788187"
+  integrity sha512-4oRpZmf2IkFXnEAtRtXZa4oEZC2uhUjg99MAmMco1IlSsu3UdukG6pHQn5UJSJausYMV61xp6HKxxpzVxYTuPg==
+  dependencies:
+    "@unique-nft/utils" "^0.3.13"
+    protobufjs "^7.1.1"
+    zod "^3.21.4"
 
 scrypt-js@3.0.1:
   version "3.0.1"
@@ -2271,7 +2298,7 @@ yocto-queue@^0.1.0:
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-zod@^3.21.4:
+zod@^3.21.4, zod@^3.22.4:
   version "3.22.4"
   resolved "https://registry.yarnpkg.com/zod/-/zod-3.22.4.tgz#f31c3a9386f61b1f228af56faa9255e845cf3fff"
   integrity sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==

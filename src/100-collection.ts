@@ -8,11 +8,10 @@ export const createCollection = async () => {
   const sdk = getSdk(signer);
 
   const ipfsUrl = await uploadImages("./images");
-  const { block, parsed, error } = await sdk.collection.create({
+  const { block, parsed, error } = await sdk.collection.createV2({
     name: "Square",
     description: "Square heads",
     tokenPrefix: "SQR",
-    schema: getUniqueV1Schema({ ipfsUrl }),
     metaUpdatePermission: "ItemOwner",
     permissions: {
       access: "Normal",
@@ -28,5 +27,5 @@ export const createCollection = async () => {
   console.log("Created at block:", block.hash);
   console.log("Collection Id:", parsed?.collectionId);
 
-  return parsed.collectionId;  
+  return parsed.collectionId;
 };

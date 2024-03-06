@@ -2,11 +2,10 @@ import { createCollection } from "./100-collection";
 import { createNfts } from "./101-nfts";
 
 const main = async () => {
-  const collectionId = await createCollection();
+  const collectionId = 2396;
   await createNfts(collectionId);
 };
 
-// Run program
 main()
   .then()
   .catch((err) => {
