@@ -8,15 +8,25 @@ Configure the following variables in .env file:
 */
 
 const getConfig = () => {
-  const { REST_URL, MNEMONIC } = process.env;
+  const { REST_URL, REST_URL_OLD, MNEMONIC, REST_URL_ASSETHUB, PINATA_JWT } =
+    process.env;
 
-  if (!REST_URL || !MNEMONIC) {
+  if (
+    !REST_URL ||
+    !MNEMONIC ||
+    !REST_URL_OLD ||
+    !REST_URL_ASSETHUB ||
+    !PINATA_JWT
+  ) {
     throw Error("Did you forget to set the .env?");
   }
 
   return {
     restUrl: REST_URL,
+    restUrlOld: REST_URL_OLD,
+    restUrlAssetHub: REST_URL_ASSETHUB,
     mnemonic: MNEMONIC,
+    pinataJwt: PINATA_JWT,
   };
 };
 

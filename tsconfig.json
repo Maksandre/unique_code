@@ -5,6 +5,9 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "outDir": "out",
+    "sourceMap": true,
+    "resolveJsonModule": true
   }
 }
