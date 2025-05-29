@@ -1,0 +1,198 @@
+Connected to Polkadot node at wss://ws-opal.unique.network
+Current runtime specVersion: 10170080
+Payload: {
+  address: '5CdDXqhv9skdNo72tAxFf1ieLTMnLxyBtydcr3amxykm5rEF',
+  blockNumber: '0x005e41c2',
+  era: '0x2500',
+  method: '0x3d12fd14000000040c28736368656d614e616d6518756e6971756534736368656d6156657273696f6e14322e302e3024746f6b656e44617461bc7b22736368656d614e616d65223a22756e69717565222c22736368656d6156657273696f6e223a22322e302e30227d0018cbbfc8f9c3ac3f8b0262328c25e2c8a29df16c87f51c30a3437ea98dda5c55',
+  nonce: '0x00000095',
+  version: 4,
+  blockHash: '0x58795ef3268f354434944cdfed9441e811920a77e112ca327404ab6f67c3994b',
+  genesisHash: '0xc87870ef90a438d574b8e320f17db372c50f62beb52e479c8ff6ee5b460670b9',
+  specVersion: '0x009b2ee0',
+  tip: '0x00000000000000000000000000000000',
+  transactionVersion: '0x00000003',
+  signedExtensions: [
+    'CheckSpecVersion',
+    'CheckTxVersion',
+    'CheckGenesis',
+    'CheckMortality',
+    'CheckNonce',
+    'CheckWeight',
+    'CheckMaintenance',
+    'DisableIdentityCalls',
+    'ChargeTransactionPayment',
+    'FakeTransactionFinalizer',
+    'StorageWeightReclaim',
+    'CheckMetadataHash'
+  ]
+}
+Method Args
+{
+  callIndex: '0x3d12',
+  args: {
+    collection_id: 5373,
+    data: {
+      nft: [
+        {
+          properties: [
+            { key: '0x736368656d614e616d65', value: '0x756e69717565' },
+            {
+              key: '0x736368656d6156657273696f6e',
+              value: '0x322e302e30'
+            },
+            {
+              key: '0x746f6b656e44617461',
+              value: '0x7b22736368656d614e616d65223a22756e69717565222c22736368656d6156657273696f6e223a22322e302e30227d'
+            }
+          ],
+          owner: {
+            substrate: '5CdDXqhv9skdNo72tAxFf1ieLTMnLxyBtydcr3amxykm5rEF'
+          }
+        }
+      ]
+    }
+  }
+}
+Spec version correct? true
+Signature: 0x01b22e21e457ece72c18c0ce69dd89bc8bbe686ce3fa4ac3d1a7522491048b35036217f18590158360206446d1cec8bd0f07e979ab5166807e8d3c04a0a2e44586
+Submit: 0xcd03840018cbbfc8f9c3ac3f8b0262328c25e2c8a29df16c87f51c30a3437ea98dda5c5501b22e21e457ece72c18c0ce69dd89bc8bbe686ce3fa4ac3d1a7522491048b35036217f18590158360206446d1cec8bd0f07e979ab5166807e8d3c04a0a2e445862500550200003d12fd14000000040c28736368656d614e616d6518756e6971756534736368656d6156657273696f6e14322e302e3024746f6b656e44617461bc7b22736368656d614e616d65223a22756e69717565222c22736368656d6156657273696f6e223a22322e302e30227d0018cbbfc8f9c3ac3f8b0262328c25e2c8a29df16c87f51c30a3437ea98dda5c55
+Valid from block #6177218 to #6177282 (period: 64, phase: 2)
+Current chain block number: 6177218
+Signature valid? true
+Status: Ready
+Status: Broadcast
+Status: InBlock
+Included in block: 0x07d53237361d4f3acee36ff1f83d6166e733173edda50e5be76e69213b123858
+Status: Finalized
+Finalized in block: 0x07d53237361d4f3acee36ff1f83d6166e733173edda50e5be76e69213b123858
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Payload: {
+  address: '5CdDXqhv9skdNo72tAxFf1ieLTMnLxyBtydcr3amxykm5rEF',
+  blockNumber: '0x005e41c8',
+  era: '0x8500',
+  method: '0x3d12fd14000000040c28736368656d614e616d6518756e6971756534736368656d6156657273696f6e14322e302e3024746f6b656e44617461bc7b22736368656d614e616d65223a22756e69717565222c22736368656d6156657273696f6e223a22322e302e30227d0018cbbfc8f9c3ac3f8b0262328c25e2c8a29df16c87f51c30a3437ea98dda5c55',
+  nonce: '0x00000096',
+  version: 4,
+  blockHash: '0xd920eedfe0b0fa402a881f94ba1984a2f81dddebaf4f819e0ed565817760981c',
+  genesisHash: '0xc87870ef90a438d574b8e320f17db372c50f62beb52e479c8ff6ee5b460670b9',
+  specVersion: '0x009b2ee0',
+  tip: '0x00000000000000000000000000000000',
+  transactionVersion: '0x00000003',
+  signedExtensions: [
+    'CheckSpecVersion',
+    'CheckTxVersion',
+    'CheckGenesis',
+    'CheckMortality',
+    'CheckNonce',
+    'CheckWeight',
+    'CheckMaintenance',
+    'DisableIdentityCalls',
+    'ChargeTransactionPayment',
+    'FakeTransactionFinalizer',
+    'StorageWeightReclaim',
+    'CheckMetadataHash'
+  ]
+}
+Method Args
+{
+  callIndex: '0x3d12',
+  args: {
+    collection_id: 5373,
+    data: {
+      nft: [
+        {
+          properties: [
+            { key: '0x736368656d614e616d65', value: '0x756e69717565' },
+            {
+              key: '0x736368656d6156657273696f6e',
+              value: '0x322e302e30'
+            },
+            {
+              key: '0x746f6b656e44617461',
+              value: '0x7b22736368656d614e616d65223a22756e69717565222c22736368656d6156657273696f6e223a22322e302e30227d'
+            }
+          ],
+          owner: {
+            substrate: '5CdDXqhv9skdNo72tAxFf1ieLTMnLxyBtydcr3amxykm5rEF'
+          }
+        }
+      ]
+    }
+  }
+}
+Spec version correct? true
+Signature: 0x01e6a5d4c6d53e1a721677b8d5fdd0efe8a08cd8070c62a6012a1629fec780c826a6259a9f18b0340abd925e4d98df66d8e7e5864a95d568646db3354853a55381
+Submit: 0xcd03840018cbbfc8f9c3ac3f8b0262328c25e2c8a29df16c87f51c30a3437ea98dda5c5501e6a5d4c6d53e1a721677b8d5fdd0efe8a08cd8070c62a6012a1629fec780c826a6259a9f18b0340abd925e4d98df66d8e7e5864a95d568646db3354853a553818500590200003d12fd14000000040c28736368656d614e616d6518756e6971756534736368656d6156657273696f6e14322e302e3024746f6b656e44617461bc7b22736368656d614e616d65223a22756e69717565222c22736368656d6156657273696f6e223a22322e302e30227d0018cbbfc8f9c3ac3f8b0262328c25e2c8a29df16c87f51c30a3437ea98dda5c55
+Valid from block #6177224 to #6177288 (period: 64, phase: 8)
+Current chain block number: 6177224
+Signature valid? true
+Status: Ready
+Status: Broadcast
+Status: InBlock
+Included in block: 0x4424d40e4cb88aade477b74a0b2df98047a9d6643c90afb8a7a9be7f5bafaca1
+Status: Finalized
+Finalized in block: 0x4424d40e4cb88aade477b74a0b2df98047a9d6643c90afb8a7a9be7f5bafaca1
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Payload: {
+  address: '5CdDXqhv9skdNo72tAxFf1ieLTMnLxyBtydcr3amxykm5rEF',
+  blockNumber: '0x005e41ce',
+  era: '0xe500',
+  method: '0x3d12fd14000000040c28736368656d614e616d6518756e6971756534736368656d6156657273696f6e14322e302e3024746f6b656e44617461bc7b22736368656d614e616d65223a22756e69717565222c22736368656d6156657273696f6e223a22322e302e30227d0018cbbfc8f9c3ac3f8b0262328c25e2c8a29df16c87f51c30a3437ea98dda5c55',
+  nonce: '0x00000097',
+  version: 4,
+  blockHash: '0x65107f56bb901c350f90c65da1de3d1bfa3714db1e0fa5d77342070e5f062433',
+  genesisHash: '0xc87870ef90a438d574b8e320f17db372c50f62beb52e479c8ff6ee5b460670b9',
+  specVersion: '0x009b2ee0',
+  tip: '0x00000000000000000000000000000000',
+  transactionVersion: '0x00000003',
+  signedExtensions: [
+    'CheckSpecVersion',
+    'CheckTxVersion',
+    'CheckGenesis',
+    'CheckMortality',
+    'CheckNonce',
+    'CheckWeight',
+    'CheckMaintenance',
+    'DisableIdentityCalls',
+    'ChargeTransactionPayment',
+    'FakeTransactionFinalizer',
+    'StorageWeightReclaim',
+    'CheckMetadataHash'
+  ]
+}
+Method Args
+{
+  callIndex: '0x3d12',
+  args: {
+    collection_id: 5373,
+    data: {
+      nft: [
+        {
+          properties: [
+            { key: '0x736368656d614e616d65', value: '0x756e69717565' },
+            {
+              key: '0x736368656d6156657273696f6e',
+              value: '0x322e302e30'
+            },
+            {
+              key: '0x746f6b656e44617461',
+              value: '0x7b22736368656d614e616d65223a22756e69717565222c22736368656d6156657273696f6e223a22322e302e30227d'
+            }
+          ],
+          owner: {
+            substrate: '5CdDXqhv9skdNo72tAxFf1ieLTMnLxyBtydcr3amxykm5rEF'
+          }
+        }
+      ]
+    }
+  }
+}
+Spec version correct? true
+Signature: 0x01368a5e88cb9b38b79ff9f7b8285ba1a522eaf694b1c9654a26b069fa34ea78189a622220a981c655380a4f70da3fceb0e6a089f07df8e16e86f1262afe403b81
+Submit: 0xcd03840018cbbfc8f9c3ac3f8b0262328c25e2c8a29df16c87f51c30a3437ea98dda5c5501368a5e88cb9b38b79ff9f7b8285ba1a522eaf694b1c9654a26b069fa34ea78189a622220a981c655380a4f70da3fceb0e6a089f07df8e16e86f1262afe403b81e5005d0200003d12fd14000000040c28736368656d614e616d6518756e6971756534736368656d6156657273696f6e14322e302e3024746f6b656e44617461bc7b22736368656d614e616d65223a22756e69717565222c22736368656d6156657273696f6e223a22322e302e30227d0018cbbfc8f9c3ac3f8b0262328c25e2c8a29df16c87f51c30a3437ea98dda5c55
+Valid from block #6177230 to #6177294 (period: 64, phase: 14)
+Current chain block number: 6177230
+Signature valid? true
+Fail
+1010: Invalid Transaction: Transaction has a bad signature

@@ -12,16 +12,26 @@ export async function initializeApi(rpcUrl = "wss://ws-opal.unique.network") {
 export async function submitAndWatchExtrinsic(
   api: ApiPromise,
   signedExtrinsicHex: string,
+  resolveInBlock = false,
 ): Promise<void> {
   return new Promise<void>(async (resolve, reject) => {
     try {
-      const unsub = await api.rpc.author.submitAndWatchExtrinsic(
+      const extrinsic = api.registry.createType(
+        "Extrinsic",
         signedExtrinsicHex,
-        (status) => {
+      );
+
+      const unsub = await api.rpc.author.submitAndWatchExtrinsic(
+        extrinsic,
+        async (status) => {
           console.log("Status:", status.type);
 
           if (status.isInBlock) {
             console.log(`Included in block: ${status.asInBlock}`);
+            if (resolveInBlock) {
+              unsub();
+              resolve();
+            }
           }
 
           if (status.isFinalized) {
@@ -31,8 +41,23 @@ export async function submitAndWatchExtrinsic(
           }
 
           if (status.isInvalid) {
-            const wtf = (status as any).asInvalid();
-            console.log(wtf);
+            console.log("Transaction status: Invalid");
+
+            // 🔍 Try runtime dry-run error explanation
+            try {
+              const result = await (api.call as any).povEstimateApi.povEstimate(
+                extrinsic,
+              );
+
+              console.log("povEstimateApi.povEstimate result:");
+              console.dir(result.toJSON(), { depth: null, colors: false });
+            } catch (povError) {
+              console.log("⚠️ Failed to call povEstimateApi.povEstimate:");
+              console.error(povError);
+            }
+
+            unsub();
+            reject(new Error("Invalid transaction"));
           }
 
           if ((status as any).dispatchError) {
@@ -42,7 +67,7 @@ export async function submitAndWatchExtrinsic(
                 dispatchError.asModule,
               );
               const { section, method } = decoded;
-              console.error(`Dispatch error: ${section}.${method}}`);
+              console.error(`Dispatch error: ${section}.${method}`);
             } else {
               console.error(`Dispatch error: ${dispatchError.toString()}`);
             }

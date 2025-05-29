@@ -8,6 +8,11 @@
     "baseUrl": "./",
     "outDir": "out",
     "sourceMap": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "paths": {
+      "@polkadot/types/lookup": [
+        "node_modules/@unique-nft/opal-testnet-types/types-lookup"
+      ]
+    }
   }
 }
